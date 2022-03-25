@@ -1,0 +1,118 @@
+body {
+  padding: 20px;
+  background-image: url("../images/concrete_seamless.png");
+  font-family: "Poppins", serif;
+}
+
+p {
+  margin: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+footer {
+  padding: 10px 30px;
+}
+
+nav li {
+  padding: 12px;
+  margin: 10px;
+}
+
+.active {
+  background-color: lightskyblue;
+  font-weight: bold;
+}
+
+img {
+  margin: 20px;
+  width: 350px;
+  padding: 10px;
+  border: 5px solid lightseagreen;
+  border-radius: 5px;
+}
+
+img:nth-child(even) {
+  background-color: lightcoral;
+}
+
+img:nth-child(odd) {
+  background-color: lightcyan;
+}
+
+img:nth-child(even):hover {
+  filter: opacity(80%);
+  border: 5px dashed;
+  cursor: pointer;
+}
+
+.nav_links {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-gallary {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.grid-gallary {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+}
+
+i {
+  color: rgb(3, 68, 109);
+}
+
+@media screen and (min-width: 900px) {
+  .nav_links {
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-around;
+  }
+
+  .grid-gallary {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+nav {
+  width: 100%;
+}
+
+.signature {
+  position: relative;
+  animation-name: mymove;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  margin: 0 auto;
+}
+
+i {
+  width: 24px;
+}
+@keyframes mymove {
+  from {
+    width: 25px;
+    opacity: 0;
+  }
+  to {
+    width: 475px;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .signature {
+    animation: none;
+  }
+}
